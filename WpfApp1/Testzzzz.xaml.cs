@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Testzzzz.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Testzzzz : UserControl
     {
-        public MainWindow()
+        public Testzzzz()
         {
             InitializeComponent();
-        }
-
-        private void Right_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

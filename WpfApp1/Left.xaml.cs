@@ -16,13 +16,23 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Manual.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Left : UserControl
     {
-        public MainWindow()
+        public Left()
         {
             InitializeComponent();
+        }
+
+        private void Joystick_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Automatic_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void Right_Loaded(object sender, RoutedEventArgs e)

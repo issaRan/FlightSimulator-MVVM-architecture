@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Right.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Right : UserControl
     {
-        public MainWindow()
+        public Right()
         {
             InitializeComponent();
-        }
-
-        private void Right_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
