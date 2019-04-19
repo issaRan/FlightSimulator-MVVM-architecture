@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{414693A2-55A0-4A53-88B3-03A78AF81908}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSimulator", "ConsoleApp1\FlightSimulator.csproj", "{758CB9E8-906F-4A95-B7BD-5E10438D80C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{414693A2-55A0-4A53-88B3-03A78AF81908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{414693A2-55A0-4A53-88B3-03A78AF81908}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{414693A2-55A0-4A53-88B3-03A78AF81908}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{414693A2-55A0-4A53-88B3-03A78AF81908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{758CB9E8-906F-4A95-B7BD-5E10438D80C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758CB9E8-906F-4A95-B7BD-5E10438D80C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758CB9E8-906F-4A95-B7BD-5E10438D80C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758CB9E8-906F-4A95-B7BD-5E10438D80C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
