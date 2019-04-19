@@ -13,11 +13,12 @@ namespace WpfApp1
         private Dictionary<string, ICommand> commands;
         private IModel model;
         public Controller(IModel model)
-        {
+        {/*
             this.model = model;
             commands = new Dictionary<string, ICommand>();
-            //commands.Add("generate", new GenerateMazeCommand(model));
+            commands.Add("generate", new GenerateMazeCommand(model));
             // more commands...
+            */
         }
         /*
         public string ExecuteCommand(string commandLine, TcpClient client)
@@ -28,7 +29,8 @@ namespace WpfApp1
                 return "Command not found";
             string[] args = arr.Skip(1).ToArray();
             ICommand command = commands[commandKey];
-            //return command.Execute(args, client);
-        }        */
+            return command.Execute(args, client);
+        }
+        */
     }
 }

@@ -13,16 +13,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ConsoleApp1.Views
+namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for FlightBoard.xaml
+    /// Interaction logic for Manual.xaml
     /// </summary>
-    public partial class FlightBoard : UserControl
+    public partial class Left : UserControl
     {
-        public FlightBoard()
+        public Left()
         {
             InitializeComponent();
+        }
+
+        private void Joystick_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Automatic_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void Right_Loaded(object sender, RoutedEventArgs e)

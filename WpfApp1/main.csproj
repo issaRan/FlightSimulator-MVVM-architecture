@@ -34,8 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DynamicDataDisplay, Version=0.3.0.0, Culture=neutral, PublicKeyToken=5b7d744a7263923f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Desktop\DynamicDataDisplay.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,16 +60,64 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="TcpServer.cs" />
+    <Compile Include="Left.xaml.cs">
+      <DependentUpon>Left.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Automatic.xaml.cs">
+      <DependentUpon>Automatic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Right.xaml.cs">
+      <DependentUpon>Right.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Testzzzz.xaml.cs">
+      <DependentUpon>Testzzzz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FlightBoard.xaml.cs">
+      <DependentUpon>FlightBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Joystick.xaml.cs">
+      <DependentUpon>Joystick.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ClientHandler.cs" />
     <Compile Include="Controller.cs" />
-    <Compile Include="GenerateMazeCommand.cs" />
     <Compile Include="IClientHandler.cs" />
     <Compile Include="IModel.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Left.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Automatic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Right.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Testzzzz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FlightBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Joystick.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -90,6 +144,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Windows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DynamicDataDisplay.dll" />
+    <Resource Include="DynamicDataDisplay.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

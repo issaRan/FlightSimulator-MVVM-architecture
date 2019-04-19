@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ConsoleApp1.Views
+namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for FlightBoard.xaml
+    /// Interaction logic for Testzzzz.xaml
     /// </summary>
-    public partial class FlightBoard : UserControl
+    public partial class Testzzzz : UserControl
     {
-        public FlightBoard()
+        public Testzzzz()
         {
             InitializeComponent();
-        }
-
-        private void Right_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
