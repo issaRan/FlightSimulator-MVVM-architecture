@@ -17,7 +17,7 @@
             <RowDefinition />
             <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
-        <local1:FlightBoard Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Loaded="FlightBoard_Loaded"/>
+        <local1:FlightBoard Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"/>
         <Button VerticalAlignment ="Center" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="0" BorderBrush="Black" Background="LightBlue" Content="Connect"/>
         <Button VerticalAlignment ="Center" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0" BorderBrush="Black" Background="LightBlue" Content="Settings"/>
     </Grid>

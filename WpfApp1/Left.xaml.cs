@@ -24,20 +24,5 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
-
-        private void Joystick_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Automatic_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Right_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Window1" Height="540" Width="510">
+        Title="Window1" Height="540" Width="1000">
     <Grid>
-        <local:Right/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <local:Right Grid.Column="1"/>
+        <local:Left/>
     </Grid>
 </Window>
