@@ -50,14 +50,14 @@ namespace WpfApp1.Views
         public double Aileron
         {
             get { return Convert.ToDouble(GetValue(AileronProperty)); }
-            set { SetValue(AileronProperty, value); }
+            set { SetValue(AileronProperty, Math.Round(value,2)); }
         }
 
         /// <summary>current Elevator (or "power"), from 0 to 100</summary>
         public double Elevator
         {
             get { return Convert.ToDouble(GetValue(ElevatorProperty)); }
-            set { SetValue(ElevatorProperty, value); }
+            set { SetValue(ElevatorProperty, Math.Round(value,2)); }
         }
 
         /// <summary>How often should be raised StickMove event in degrees</summary>
