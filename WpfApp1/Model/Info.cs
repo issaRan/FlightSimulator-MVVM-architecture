@@ -39,7 +39,7 @@ namespace WpfApp1.Model
         public void Start()
         {
             
-            string ip = "127.0.0.1";
+           /* string ip = "127.0.0.1";
             int port = 9586;
             listener = new TcpListener(new IPEndPoint(IPAddress.Parse(ip), port));
             listener.Start();
@@ -55,6 +55,7 @@ namespace WpfApp1.Model
                 throw new Exception("Error");
             }
             
+    */
         }
         public string[] readFromSimulator()
         {
