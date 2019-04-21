@@ -1,4 +1,5 @@
-﻿//using FlightSimulator.Model.EventArgs;
+﻿using WpfApp1.Model.EventArgs;
+using WpfApp1.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,8 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class Joystick : UserControl
     {
+        private ManualVM manual;
+        private VirtualJoystickEventArgs VirtualJoystickEventArgs;
         /// <summary>Current Aileron</summary>
         public static readonly DependencyProperty AileronProperty =
             DependencyProperty.Register("Aileron", typeof(double), typeof(Joystick),null);
@@ -89,14 +92,14 @@ namespace WpfApp1.Views
         /// <summary>Delegate holding data for joystick state change</summary>
         /// <param name="sender">The object that fired the event</param>
         /// <param name="args">Holds new values for Aileron and Elevator</param>
-        //public delegate void OnScreenJoystickEventHandler(Joystick sender, VirtualJoystickEventArgs args);
+        public delegate void OnScreenJoystickEventHandler(Joystick sender, VirtualJoystickEventArgs args);
 
         /// <summary>Delegate for joystick events that hold no data</summary>
         /// <param name="sender">The object that fired the event</param>
         public delegate void EmptyJoystickEventHandler(Joystick sender);
 
         /// <summary>This event fires whenever the joystick moves</summary>
-        //public event OnScreenJoystickEventHandler Moved;
+        public event OnScreenJoystickEventHandler Moved;
 
         /// <summary>This event fires once the joystick is released and its position is reset</summary>
         public event EmptyJoystickEventHandler Released;
@@ -112,7 +115,8 @@ namespace WpfApp1.Views
         public Joystick()
         {
             InitializeComponent();
-
+            this.DataContext = new ManualVM();
+            this.VirtualJoystickEventArgs = new VirtualJoystickEventArgs();
             Knob.MouseLeftButtonDown += Knob_MouseLeftButtonDown;
             Knob.MouseLeftButtonUp += Knob_MouseLeftButtonUp;
             Knob.MouseMove += Knob_MouseMove;
@@ -152,15 +156,17 @@ namespace WpfApp1.Views
 
             knobPosition.X = deltaPos.X;
             knobPosition.Y = deltaPos.Y;
-            /*
             if (Moved == null ||
                 (!(Math.Abs(_prevAileron - Aileron) > AileronStep) && !(Math.Abs(_prevElevator - Elevator) > ElevatorStep)))
+            {
+                this.VirtualJoystickEventArgs.Aileron = Aileron / 124;
+                this.VirtualJoystickEventArgs.Elevator = Elevator / 124;
                 return;
+            }
 
             Moved?.Invoke(this, new VirtualJoystickEventArgs { Aileron = Aileron, Elevator = Elevator });
             _prevAileron = Aileron;
             _prevElevator = Elevator;
-            */
         }
 
         private void Knob_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)

@@ -66,22 +66,29 @@
     <Compile Include="Automatic.xaml.cs">
       <DependentUpon>Automatic.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manual.xaml.cs">
+      <DependentUpon>Manual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Command.cs" />
+    <Compile Include="Model\EventArgs\VirtualJoystickEventArgs.cs" />
+    <Compile Include="Model\Info.cs" />
+    <Compile Include="Model\Interface\ISettingsModel.cs" />
+    <Compile Include="Model\ManualModel.cs" />
+    <Compile Include="PathsForSimulator.cs" />
     <Compile Include="Right.xaml.cs">
       <DependentUpon>Right.xaml</DependentUpon>
     </Compile>
     <Compile Include="Testzzzz.xaml.cs">
       <DependentUpon>Testzzzz.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AutoPilotVM.cs" />
+    <Compile Include="ViewModel\ManualVM.cs" />
     <Compile Include="Views\FlightBoard.xaml.cs">
       <DependentUpon>FlightBoard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Joystick.xaml.cs">
       <DependentUpon>Joystick.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -90,15 +97,18 @@
     <Compile Include="Controller.cs" />
     <Compile Include="IClientHandler.cs" />
     <Compile Include="IModel.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="mainWindow.xaml.cs">
+      <DependentUpon>mainWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Left.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Automatic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manual.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,6 +127,10 @@
     <Page Include="Views\Joystick.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="mainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
