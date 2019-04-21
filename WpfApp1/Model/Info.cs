@@ -38,9 +38,9 @@ namespace WpfApp1.Model
         #endregion
         public void Start()
         {
-            
+            /*
             string ip = "127.0.0.1";
-            int port = 9586;
+            int port = 2020;
             listener = new TcpListener(new IPEndPoint(IPAddress.Parse(ip), port));
             listener.Start();
             Console.WriteLine("Waiting for connections...");
@@ -54,7 +54,7 @@ namespace WpfApp1.Model
             {
                 throw new Exception("Error");
             }
-            
+            */
         }
         public string[] readFromSimulator()
         {

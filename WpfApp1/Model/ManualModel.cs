@@ -13,10 +13,13 @@ namespace WpfApp1.Model
         private Command command;
         public ManualModel()
         {
-            this.info = Info.Instance;
-            this.command = Command.Instance;
-            info.Start();
-            command.toConnect();
+            if (!Command.Instance.ifConnected())
+            {
+                this.info = Info.Instance;
+                this.command = Command.Instance;
+                info.Start();
+                command.toConnect();
+            }
         }
         public void send(string commandSend)
         {

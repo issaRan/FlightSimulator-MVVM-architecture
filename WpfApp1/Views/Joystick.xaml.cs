@@ -159,8 +159,10 @@ namespace WpfApp1.Views
             if (Moved == null ||
                 (!(Math.Abs(_prevAileron - Aileron) > AileronStep) && !(Math.Abs(_prevElevator - Elevator) > ElevatorStep)))
             {
-                this.VirtualJoystickEventArgs.Aileron = Aileron / 124;
-                this.VirtualJoystickEventArgs.Elevator = Elevator / 124;
+                Aileron /= 124;
+                Elevator /= 124;
+                this.VirtualJoystickEventArgs.Aileron = Aileron;
+                this.VirtualJoystickEventArgs.Elevator = Elevator;
                 return;
             }
 

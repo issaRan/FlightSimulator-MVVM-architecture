@@ -32,7 +32,7 @@ namespace WpfApp1.Model.EventArgs
                 }
                 if (Command.Instance.ifConnected())
                 {
-                    Command.Instance.send(paths.GetAileronPath() + Convert.ToString(aileron));
+                    Command.Instance.send(paths.GetElevetor() + Convert.ToString(elevator));
                 }
             }
         }
@@ -49,9 +49,10 @@ namespace WpfApp1.Model.EventArgs
                 {
                     elevator = 1;
                 }
+                
                 if (Command.Instance.ifConnected())
                 {
-                    Command.Instance.send(paths.GetElevetor() + Convert.ToString(elevator));
+                    Command.Instance.send(paths.GetAileronPath() + Convert.ToString(aileron));
                 }
             }
         }
