@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using WpfApp1.ViewModel;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
