@@ -35,7 +35,7 @@ namespace WpfApp1.Model
         #endregion
         public void toConnect()
         {
-            /*
+           /* 
             string ip = "127.0.0.1";
             int port = 5402;
             IPEndPoint ep = new IPEndPoint(IPAddress.Parse(ip), port);
@@ -45,6 +45,7 @@ namespace WpfApp1.Model
             connected = true;
             writer = new BinaryWriter(client.GetStream());
             */
+            
         }
         public void send(string command)
         {
