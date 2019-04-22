@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp1.Views.Windows.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views.Windows"
+        mc:Ignorable="d"
+        Title="Settings" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" FontWeight="DemiBold" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3">Flight Server IP:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="2" FontWeight="DemiBold" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3">Flight Info Port:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="3" FontWeight="DemiBold" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3">Flight Command Port:</TextBlock>
+
+        <TextBox Text="{Binding FlightServerIP}" Grid.Column="4" FontSize="15" VerticalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding FlightInfoPort}" Grid.Column="4" FontSize="15" VerticalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding FlightCommandPort}" Grid.Column="4" FontSize="15" VerticalAlignment="Center" Grid.Row="3" Grid.ColumnSpan="2"/>
+
+        <Button Name="OkButton" Grid.Row="5" Grid.Column="2" VerticalAlignment="top" HorizontalAlignment="Stretch"
+                FontSize="15" Background="AliceBlue" BorderBrush="LightBlue" Content="OK" Command="{Binding OkCommand}"
+                Click="Button_Click"/>
+        <Button Name="CancelButton" Grid.Row="5" Grid.Column="4" VerticalAlignment="top" HorizontalAlignment="Stretch"
+                Command="{Binding CancelCommand}" Click="Button_Click" FontSize="15" Background="AliceBlue" BorderBrush="LightBlue" Content="Cancel"/>
+    </Grid>
+</Window>
