@@ -60,13 +60,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Left.xaml.cs">
+    <Compile Include="Model\AutomaticModel.cs" />
+    <Compile Include="Model\CommandHandler.cs" />
+    <Compile Include="Views\Left.xaml.cs">
       <DependentUpon>Left.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Automatic.xaml.cs">
+    <Compile Include="Views\Automatic.xaml.cs">
       <DependentUpon>Automatic.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Manual.xaml.cs">
+    <Compile Include="Views\Manual.xaml.cs">
       <DependentUpon>Manual.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Command.cs" />
@@ -75,11 +77,8 @@
     <Compile Include="Model\Interface\ISettingsModel.cs" />
     <Compile Include="Model\ManualModel.cs" />
     <Compile Include="PathsForSimulator.cs" />
-    <Compile Include="Right.xaml.cs">
+    <Compile Include="Views\Right.xaml.cs">
       <DependentUpon>Right.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Testzzzz.xaml.cs">
-      <DependentUpon>Testzzzz.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\AutoPilotVM.cs" />
     <Compile Include="ViewModel\ManualVM.cs" />
@@ -100,23 +99,19 @@
     <Compile Include="mainWindow.xaml.cs">
       <DependentUpon>mainWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Left.xaml">
+    <Page Include="Views\Left.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Automatic.xaml">
+    <Page Include="Views\Automatic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Manual.xaml">
+    <Page Include="Views\Manual.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Right.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Testzzzz.xaml">
+    <Page Include="Views\Right.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -161,10 +156,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Windows\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DynamicDataDisplay.dll" />
-    <Resource Include="DynamicDataDisplay.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,7 +10,7 @@ namespace WpfApp1.ViewModel
     {
         private double throttle;
         private double rudder;
-        private ManualModel salim = new ManualModel();
+        private ManualModel manualModel = new ManualModel();
         private PathsForSimulator paths = new PathsForSimulator();
         public double Throttle
         {

@@ -5,19 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Flight Control   " Height="565" Width="1000">
+        Title="Flight Control   " Height="580" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="25*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
                    FontSize="30" HorizontalAlignment="Center" FontWeight="Bold">Flight Simulator</TextBlock>
-        <local:Right Grid.Column="1" Grid.Row="1"/>
-        <local:Left Grid.Column="0" Grid.Row="1"/>
+        <local:Right Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch"/>
+        <local:Left Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch"/>
     </Grid>
 </Window>

@@ -11,7 +11,7 @@
             <local:Manual/>
         </TabItem>
         <TabItem Width="auto" Height="auto" FontWeight="Bold" FontSize="20" Header="Auto Pilot">
-            <local:Automatic />
+            <local:Automatic/>
         </TabItem>
     </TabControl>
 </UserControl>

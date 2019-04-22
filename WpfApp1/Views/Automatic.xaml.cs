@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using WpfApp1.ViewModel;
 
 namespace WpfApp1
 {
@@ -20,9 +22,22 @@ namespace WpfApp1
     /// </summary>
     public partial class Automatic : UserControl
     {
+        private AutoPilotVM vm;
         public Automatic()
         {
             InitializeComponent();
+            this.vm = new AutoPilotVM();
+            this.DataContext = vm;
         }
+       /* public void OnPropertyChanged(Object sender, PropertyChangedEventArgs e)
+        {
+            switch (e.PropertyName)
+            {
+                case "Background":
+                    this.Background = vm.Background;
+                    break;
+            }
+        }
+        */
     }
 }
