@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.ViewModel;
+using WpfApp1.Views.Windows;
 
 namespace WpfApp1
 {
@@ -20,9 +22,12 @@ namespace WpfApp1
     /// </summary>
     public partial class Left : UserControl
     {
+        private LeftVM vm;
         public Left()
         {
+            this.vm = new LeftVM();
             InitializeComponent();
+            DataContext = this.vm;
         }
     }
 }

@@ -63,6 +63,7 @@
     <Compile Include="Model\ApplicationSettingsModel.cs" />
     <Compile Include="Model\AutomaticModel.cs" />
     <Compile Include="Model\CommandHandler.cs" />
+    <Compile Include="ViewModel\LeftVM.cs" />
     <Compile Include="ViewModel\SettingsVM.cs" />
     <Compile Include="Views\Left.xaml.cs">
       <DependentUpon>Left.xaml</DependentUpon>
