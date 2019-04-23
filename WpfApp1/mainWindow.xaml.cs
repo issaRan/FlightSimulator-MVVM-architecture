@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfApp1.Views.Windows;
-
+using WpfApp1.Model;
 namespace WpfApp1
 {
     /// <summary>

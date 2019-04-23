@@ -13,6 +13,18 @@ namespace WpfApp1.ViewModel
     public class SettingsVM
     {
         private ISettingsModel model;
+        private static ISettingsModel m_Instance = null;
+        public static ISettingsModel Instance
+        {
+            get
+            {
+                if (m_Instance == null)
+                {
+                    m_Instance = new ApplicationSettingsModel();
+                }
+                return m_Instance;
+            }
+        }
         public SettingsVM()
         {
             this.model = new ApplicationSettingsModel();

@@ -33,19 +33,15 @@ namespace WpfApp1.Model
             }
         }
         #endregion
-        public void toConnect()
+        public void toConnect(string ip,int port)
         {
-           /* 
-            string ip = "127.0.0.1";
-            int port = 5402;
             IPEndPoint ep = new IPEndPoint(IPAddress.Parse(ip), port);
             client = new TcpClient();
             client.Connect(ep);
             Console.WriteLine("Client Added");
             connected = true;
             writer = new BinaryWriter(client.GetStream());
-            */
-            
+                      
         }
         public void send(string command)
         {

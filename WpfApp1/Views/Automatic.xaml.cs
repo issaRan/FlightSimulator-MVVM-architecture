@@ -29,15 +29,5 @@ namespace WpfApp1
             this.vm = new AutoPilotVM();
             this.DataContext = vm;
         }
-       /* public void OnPropertyChanged(Object sender, PropertyChangedEventArgs e)
-        {
-            switch (e.PropertyName)
-            {
-                case "Background":
-                    this.Background = vm.Background;
-                    break;
-            }
-        }
-        */
     }
 }

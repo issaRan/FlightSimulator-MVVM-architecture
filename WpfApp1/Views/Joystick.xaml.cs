@@ -115,7 +115,7 @@ namespace WpfApp1.Views
         public Joystick()
         {
             InitializeComponent();
-            this.DataContext = new ManualVM();
+            //this.DataContext = new ManualVM();
             this.VirtualJoystickEventArgs = new VirtualJoystickEventArgs();
             Knob.MouseLeftButtonDown += Knob_MouseLeftButtonDown;
             Knob.MouseLeftButtonUp += Knob_MouseLeftButtonUp;

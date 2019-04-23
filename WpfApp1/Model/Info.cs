@@ -36,34 +36,16 @@ namespace WpfApp1.Model
             }
         }
         #endregion
-        public void Start()
+        public void Start(string ip, int port)
         {
-            
-           /* string ip = "127.0.0.1";
-            int port = 9586;
             listener = new TcpListener(new IPEndPoint(IPAddress.Parse(ip), port));
             listener.Start();
             Console.WriteLine("Waiting for connections...");
-            this.client = listener.AcceptTcpClient();
-            try
-            {
-                this.thread = new Thread(() => readFromSimulator());
-                thread.Start();
-            }
-            catch (SocketException)
-            {
-                throw new Exception("Error");
-            }
-            
-    */
+            client = listener.AcceptTcpClient();
         }
         public string[] readFromSimulator()
         {
-            if (!client.Connected)
-            {
-                Start();
-            }
-            NetworkStream stream = this.client.GetStream();
+            NetworkStream stream = client.GetStream();
             BinaryReader reader = new BinaryReader(stream);
             string message = "";
             string[] splitted;
@@ -72,12 +54,10 @@ namespace WpfApp1.Model
             {
                 message += c;
             }
-            Console.WriteLine(message);
             splitted = message.Split(',');
             message = "";
             return splitted;
         }
-
         public void Stop()
         {
             listener.Stop();
