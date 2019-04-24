@@ -31,7 +31,6 @@ namespace WpfApp1.ViewModel
         public FlightBoardVM()
         {
             model = FlightBoardModel.getInstance();
-            model.connect();
             model.PropertyChanged += delegate (Object sender, PropertyChangedEventArgs e)
             {
                 if (e.PropertyName == "Lat")

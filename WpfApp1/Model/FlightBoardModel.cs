@@ -62,9 +62,9 @@ namespace WpfApp1.Model
             info = Info.Instance;
             command = Command.Instance;
             info.Start(model.FlightServerIP, model.FlightInfoPort);
-            Thread thread = new Thread(()=>
+            Thread thread = new Thread(() =>
             {
-                while(true)
+                while (true)
                 {
                     string[] splittedVal;
                     splittedVal = info.readFromSimulator();

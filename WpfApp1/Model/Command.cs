@@ -54,5 +54,9 @@ namespace WpfApp1.Model
         {
             return this.connected;
         }
+        public void Stop()
+        {
+            this.client.Close();
+        }
     }
 }

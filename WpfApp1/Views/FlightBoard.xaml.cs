@@ -44,7 +44,6 @@ namespace FlightSimulator.Views
 
         private void Vm_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            Console.WriteLine("salim");
             if(e.PropertyName.Equals("Lat") || e.PropertyName.Equals("Lon"))
             {
                 Point p1 = new Point(FlightBoardVM.Instance.Lat, FlightBoardVM.Instance.Lon);            // Fill here!

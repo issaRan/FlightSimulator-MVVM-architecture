@@ -12,16 +12,10 @@ namespace WpfApp1.Model
 {
     class Info
     {
-        private int port;
-        private string ip;
         private TcpListener listener;
         TcpClient client;
-        private Thread thread;
-
-        public Info()
-        {
-
-        }
+        
+        public Info(){}
         #region
         private static Info m_Instance = null;
         public static Info Instance
@@ -38,8 +32,8 @@ namespace WpfApp1.Model
         #endregion
         public void Start(string ip, int port)
         {
-            listener = new TcpListener(new IPEndPoint(IPAddress.Parse(ip), port));
-            listener.Start();
+            listener = new TcpListener(new IPEndPoint(IPAddress.Parse(ip), port));            
+            listener.Start();            
             Console.WriteLine("Waiting for connections...");
             client = listener.AcceptTcpClient();
         }
@@ -60,6 +54,7 @@ namespace WpfApp1.Model
         }
         public void Stop()
         {
+            client.Close();
             listener.Stop();
         }
     }

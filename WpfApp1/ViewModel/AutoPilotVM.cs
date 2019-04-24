@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media;
 using WpfApp1.Model;
+
 namespace WpfApp1.ViewModel
 {
     class AutoPilotVM : INotifyPropertyChanged
@@ -15,7 +16,8 @@ namespace WpfApp1.ViewModel
         private Brush background;
         private AutomaticModel model;
         private string commands;
-        public AutoPilotVM() {
+        public AutoPilotVM()
+        {
             this.model = new AutomaticModel();
             this.background = Brushes.White;
             this.commands = "";
@@ -33,10 +35,11 @@ namespace WpfApp1.ViewModel
         public String Commands
         {
             get { return this.commands; }
-            set {
+            set
+            {
                 if (!string.IsNullOrEmpty(commands = value))
                 {
-                   if (Background == Brushes.White) { Background = Brushes.LightPink; }
+                    if (Background == Brushes.White) { Background = Brushes.LightPink; }
                 }
                 else if (Background != Brushes.White) { Background = Brushes.White; }
                 /*
@@ -59,8 +62,20 @@ namespace WpfApp1.ViewModel
                 }));
             }
         }
-        /*
-         * IMPLEMENT THE PROPERTY OF OkCommand HERE !
-         */
+        private ICommand _okCommand;
+        public ICommand OkCommand
+        {
+            get
+            {
+                return _okCommand ?? (_okCommand = new CommandHandler(() =>
+                {
+                    string commandsToModel = commands;
+                    Commands = "";
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Commands"));
+                    Background = Brushes.White;
+                    model.sendCommands(commandsToModel);
+                }));
+            }
+        }
     }
 }
