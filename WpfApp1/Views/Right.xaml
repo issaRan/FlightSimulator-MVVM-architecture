@@ -6,12 +6,14 @@
              xmlns:local="clr-namespace:WpfApp1"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <TabControl>
-        <TabItem Width="auto" Height="auto" FontWeight="Bold" FontSize="20" Header="Manual">
-            <local:Manual/>
-        </TabItem>
-        <TabItem Width="auto" Height="auto" FontWeight="Bold" FontSize="20" Header="Auto Pilot">
-            <local:Automatic/>
-        </TabItem>
-    </TabControl>
+    <Viewbox>
+        <TabControl>
+            <TabItem Width="auto" Height="auto" FontWeight="Bold" FontSize="20" Header="Manual">
+                <local:Manual/>
+            </TabItem>
+            <TabItem Width="auto" Height="auto" FontWeight="Bold" FontSize="20" Header="Auto Pilot">
+                <local:Automatic/>
+            </TabItem>
+        </TabControl>
+    </Viewbox>
 </UserControl>
