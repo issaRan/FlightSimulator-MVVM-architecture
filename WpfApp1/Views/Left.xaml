@@ -7,7 +7,9 @@
              xmlns:local1="clr-namespace:FlightSimulator.Views"
              mc:Ignorable="d"
              d:DesignHeight="510" d:DesignWidth="475">
+    <!-- FlightBoard Side View -->
     <Grid>
+        <!-- Grid Definitions -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="3*"/>
@@ -22,7 +24,9 @@
             <RowDefinition Height="0.125*"/>
             <RowDefinition Height="13*"/>
         </Grid.RowDefinitions>
+        <!-- FlightBoard Part -->
         <local1:FlightBoard Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="11"/>
+        <!-- Buttons Part -->
         <Button FontWeight="DemiBold" FontSize="15" Name="ConnectButton" VerticalAlignment ="Center" HorizontalAlignment="Stretch" Grid.Column="3" Grid.Row="0" BorderBrush="Black" Background="LightBlue" Content="Connect"
                 Command="{Binding ConnectCommand}"/>
         <Button FontWeight="DemiBold" FontSize="15" Name="SettingsButton" VerticalAlignment ="Center" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="0" BorderBrush="Black" Background="LightBlue" Content="Settings"
