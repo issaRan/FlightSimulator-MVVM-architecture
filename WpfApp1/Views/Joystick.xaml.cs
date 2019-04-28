@@ -24,7 +24,7 @@ namespace WpfApp1.Views
     public partial class Joystick : UserControl
     {
         private ManualVM manual;
-        private VirtualJoystickEventArgs VirtualJoystickEventArgs;
+        //private VirtualJoystickEventArgs VirtualJoystickEventArgs;
         /// <summary>Current Aileron</summary>
         public static readonly DependencyProperty AileronProperty =
             DependencyProperty.Register("Aileron", typeof(double), typeof(Joystick),null);
@@ -116,7 +116,7 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
             //this.DataContext = new ManualVM();
-            this.VirtualJoystickEventArgs = new VirtualJoystickEventArgs();
+            //this.VirtualJoystickEventArgs = new VirtualJoystickEventArgs();
             Knob.MouseLeftButtonDown += Knob_MouseLeftButtonDown;
             Knob.MouseLeftButtonUp += Knob_MouseLeftButtonUp;
             Knob.MouseMove += Knob_MouseMove;
@@ -151,18 +151,18 @@ namespace WpfApp1.Views
             double distance = Math.Round(Math.Sqrt(deltaPos.X * deltaPos.X + deltaPos.Y * deltaPos.Y));
             if (distance >= canvasWidth / 2 || distance >= canvasHeight / 2)
                 return;
-            Aileron = -deltaPos.Y;
-            Elevator = deltaPos.X;
+            Aileron = -deltaPos.Y/124;
+            Elevator = deltaPos.X/124;
 
             knobPosition.X = deltaPos.X;
             knobPosition.Y = deltaPos.Y;
             if (Moved == null ||
                 (!(Math.Abs(_prevAileron - Aileron) > AileronStep) && !(Math.Abs(_prevElevator - Elevator) > ElevatorStep)))
             {
-                Aileron /= 124;
-                Elevator /= 124;
-                this.VirtualJoystickEventArgs.Aileron = Aileron;
-                this.VirtualJoystickEventArgs.Elevator = Elevator;
+                //Aileron /= 124;
+                //Elevator /= 124;
+                //this.VirtualJoystickEventArgs.Aileron = Aileron;
+                //this.VirtualJoystickEventArgs.Elevator = Elevator;
                 return;
             }
 

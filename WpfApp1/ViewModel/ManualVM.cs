@@ -8,6 +8,8 @@ namespace WpfApp1.ViewModel
 {
     class ManualVM
     {
+        private double aileron;
+        private double elevator;
         private double throttle;
         private double rudder;
         private ManualModel manualModel = new ManualModel();
@@ -49,6 +51,48 @@ namespace WpfApp1.ViewModel
                 if (Command.Instance.ifConnected())
                 {
                     Command.Instance.send(paths.GetRudder() + Convert.ToString(rudder));
+                }
+            }
+        }
+
+        public double Aileron
+        {
+            get { return aileron; }
+            set
+            {
+                aileron = value;
+                if (aileron < -1)
+                {
+                    aileron = -1;
+                }
+                else if (aileron > 1)
+                {
+                    aileron = 1;
+                }
+                if (Command.Instance.ifConnected())
+                {
+                    Command.Instance.send(paths.GetElevetor() + Convert.ToString(elevator));
+                }
+            }
+        }
+        public double Elevator
+        {
+            get { return elevator; }
+            set
+            {
+                elevator = value;
+                if (elevator < -1)
+                {
+                    elevator = -1;
+                }
+                else if (elevator > 1)
+                {
+                    elevator = 1;
+                }
+
+                if (Command.Instance.ifConnected())
+                {
+                    Command.Instance.send(paths.GetAileronPath() + Convert.ToString(aileron));
                 }
             }
         }
