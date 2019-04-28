@@ -8,11 +8,11 @@
              d:DesignHeight="500" d:DesignWidth="500">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -45,13 +45,13 @@
         <TextBlock TextAlignment="Center" Grid.Column="3"  Grid.Row="3" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold"
                    Name="RudderValue" Text ="{Binding ElementName=RudderSlider,
                                 UpdateSourceTrigger=PropertyChanged, Path=Value, StringFormat={}{0:0.00}}"/>
-        <Viewbox Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center"/>
+        <Viewbox Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center"/>
         <TextBlock Name="AileronVal" Text="{Binding Aileron, UpdateSourceTrigger=PropertyChanged ,Mode=OneWayToSource}" TextAlignment="Center" Grid.Column="3"  Grid.Row="0" FontSize="20"
-                  Grid.ColumnSpan="2"  HorizontalAlignment="Center" FontWeight="Bold"/>
+                  Grid.ColumnSpan="3"  HorizontalAlignment="Center" FontWeight="Bold" />
 
-        <Viewbox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center"/>
-        <TextBlock Name="ElevatorVal" TextAlignment="Center" Grid.Column="4"  Grid.Row="1" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold"
-                  Text="{Binding Elevator, UpdateSourceTrigger=PropertyChanged , Mode=OneWayToSource, StringFormat={}{0:0.00}}">
+        <Viewbox Grid.Column="4" Grid.Row="0" HorizontalAlignmainment="Center"/>
+        <TextBlock Name="ElevatorVal" TextAlignment="Center" Grid.Column="4"  Grid.Row="0" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold"
+                  Text="{Binding Elevator, UpdateSourceTrigger=PropertyChanged , Mode=OneWayToSource, StringFormat={}{0:0.00}}" Grid.RowSpan="2">
             <TextBlock.LayoutTransform>
                 <RotateTransform Angle="90"/>
             </TextBlock.LayoutTransform>
